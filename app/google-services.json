@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1039377922609",
+    "firebase_url": "https://sujin-final.firebaseio.com",
+    "project_id": "sujin-final",
+    "storage_bucket": "sujin-final.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1039377922609:android:02b7018665d05c6fc23310",
+        "android_client_info": {
+          "package_name": "com.example.hello"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1039377922609-vo4pnkrc55flcsnvs0014n4qkaqhudun.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4mVT8zKAoAEzXBuc1taL3TM6LlibXhh4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1039377922609-vo4pnkrc55flcsnvs0014n4qkaqhudun.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

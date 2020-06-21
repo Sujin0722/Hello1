@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/app_toolbar1"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#338bde"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/app_font"
+                    android:gravity="center"
+                    android:text="채소"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/button3"
+                        android:layout_width="88dp"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector2"
+                        android:button="@android:color/transparent"
+                        android:text="파"
+                        android:textAlignment="center"
+                        android:textStyle="bold" />
+
+                    <CheckBox
+                        android:id="@+id/button4"
+                        android:layout_width="88dp"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector2"
+                        android:button="@android:color/transparent"
+                        android:text="양파"
+                        android:textAlignment="center"
+                        android:textStyle="bold" />
+
+                    <CheckBox
+                        android:id="@+id/button5"
+                        android:layout_width="88dp"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector2"
+                        android:button="@android:color/transparent"
+                        android:text="당근"
+                        android:textAlignment="center"
+                        android:textStyle="bold" />
+
+                    <CheckBox
+                        android:id="@+id/button6"
+                        android:layout_width="88dp"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector2"
+                        android:button="@android:color/transparent"
+                        android:text="감자"
+                        android:textAlignment="center"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/button7"
+                        android:layout_width="88dp"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector2"
+                        android:button="@android:color/transparent"
+                        android:text="마늘"
+                        android:textAlignment="center"
+                        android:textStyle="bold" />
+
+                    <CheckBox
+                        android:id="@+id/button8"
+                        android:layout_width="88dp"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector2"
+                        android:button="@android:color/transparent"
+                        android:text="양배추"
+                        android:textAlignment="center"
+                        android:textStyle="bold" />
+
+                    <CheckBox
+                        android:id="@+id/button9"
+                        android:layout_width="88dp"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector2"
+                        android:button="@android:color/transparent"
+                        android:text="토마토"
+                        android:textAlignment="center"
+                        android:textStyle="bold" />
+
+                    <CheckBox
+                        android:id="@+id/button10"
+                        android:layout_width="88dp"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector2"
+                        android:button="@android:color/transparent"
+                        android:text="시금치"
+                        android:textAlignment="center"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/button11"
+                        android:layout_width="88dp"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector2"
+                        android:button="@android:color/transparent"
+                        android:text="고추"
+                        android:textAlignment="center"
+                        android:textStyle="bold" />
+
+                    <CheckBox
+                        android:id="@+id/button12"
+                        android:layout_width="88dp"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector2"
+                        android:button="@android:color/transparent"
+                        android:text="브로콜리"
+                        android:textAlignment="center"
+                        android:textStyle="bold" />
+
+                    <CheckBox
+                        android:id="@+id/button13"
+                        android:layout_width="88dp"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector2"
+                        android:button="@android:color/transparent"
+                        android:text="콩나물"
+                        android:textAlignment="center"
+                        android:textStyle="bold" />
+
+                    <CheckBox
+                        android:id="@+id/button14"
+                        android:layout_width="88dp"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector2"
+                        android:button="@android:color/transparent"
+                        android:text="버섯"
+                        android:textAlignment="center"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/button15"
+                        android:layout_width="88dp"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector2"
+                        android:button="@android:color/transparent"
+                        android:text="오이"
+                        android:textAlignment="center"
+                        android:textStyle="bold" />
+
+                    <CheckBox
+                        android:id="@+id/button16"
+                        android:layout_width="88dp"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector2"
+                        android:button="@android:color/transparent"
+                        android:text="파프리카"
+                        android:textAlignment="center"
+                        android:textStyle="bold" />
+
+                    <CheckBox
+                        android:id="@+id/button17"
+                        android:layout_width="88dp"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector2"
+                        android:button="@android:color/transparent"
+                        android:text="숙주"
+                        android:textAlignment="center"
+                        android:textStyle="bold" />
+
+                    <CheckBox
+                        android:id="@+id/button18"
+                        android:layout_width="88dp"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector2"
+                        android:button="@android:color/transparent"
+                        android:text="가지"
+                        android:textAlignment="center"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/app_font"
+                    android:gravity="center"
+                    android:text="육류 / 유제품"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/button19"
+                        android:layout_width="88dp"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector2"
+                        android:button="@android:color/transparent"
+                        android:text="돼지고기"
+                        android:textAlignment="center"
+                        android:textStyle="bold" />
+
+                    <CheckBox
+                        android:id="@+id/button20"
+                        android:layout_width="88dp"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector2"
+                        android:button="@android:color/transparent"
+                        android:text="닭고기"
+                        android:textAlignment="center"
+                        android:textStyle="bold" />
+
+                    <CheckBox
+                        android:id="@+id/button21"
+                        android:layout_width="88dp"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector2"
+                        android:button="@android:color/transparent"
+                        android:text="베이컨"
+                        android:textAlignment="center"
+                        android:textStyle="bold" />
+
+                    <CheckBox
+                        android:id="@+id/button22"
+                        android:layout_width="88dp"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector2"
+                        android:button="@android:color/transparent"
+                        android:text="계란"
+                        android:textAlignment="center"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/app_font"
+                    android:gravity="center"
+                    android:text="해산물"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/button23"
+                        android:layout_width="88dp"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector2"
+                        android:button="@android:color/transparent"
+                        android:text="오징어"
+                        android:textAlignment="center"
+                        android:textStyle="bold" />
+
+                    <CheckBox
+                        android:id="@+id/button24"
+                        android:layout_width="88dp"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector2"
+                        android:button="@android:color/transparent"
+                        android:text="바지락"
+                        android:textAlignment="center"
+                        android:textStyle="bold" />
+
+                    <CheckBox
+                        android:id="@+id/button25"
+                        android:layout_width="88dp"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector2"
+                        android:button="@android:color/transparent"
+                        android:text="홍합"
+                        android:textAlignment="center"
+                        android:textStyle="bold" />
+
+                    <CheckBox
+                        android:id="@+id/button26"
+                        android:layout_width="88dp"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector2"
+                        android:button="@android:color/transparent"
+                        android:text="새우"
+                        android:textAlignment="center"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/app_font"
+                    android:gravity="center"
+                    android:text="기타"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/button27"
+                        android:layout_width="88dp"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector2"
+                        android:button="@android:color/transparent"
+                        android:text="두부"
+                        android:textAlignment="center"
+                        android:textStyle="bold" />
+
+                    <CheckBox
+                        android:id="@+id/button28"
+                        android:layout_width="88dp"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector2"
+                        android:button="@android:color/transparent"
+                        android:text="어묵"
+                        android:textAlignment="center"
+                        android:textStyle="bold" />
+
+                    <CheckBox
+                        android:id="@+id/button29"
+                        android:layout_width="88dp"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector2"
+                        android:button="@android:color/transparent"
+                        android:text="참치통조림"
+                        android:textAlignment="center"
+                        android:textStyle="bold" />
+
+                    <CheckBox
+                        android:id="@+id/button30"
+                        android:layout_width="88dp"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector2"
+                        android:button="@android:color/transparent"
+                        android:text="떡"
+                        android:textAlignment="center"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/button31"
+                android:layout_width="120dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="130dp"
+                android:layout_marginTop="98dp"
+                android:layout_marginEnd="131dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/but"
+                android:text="레시피 추천"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <Button
+                android:id="@+id/button32"
+                android:layout_width="120dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="130dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="131dp"
+                android:layout_marginBottom="70dp"
+                android:background="@drawable/but"
+                android:text="레시피 추천"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
