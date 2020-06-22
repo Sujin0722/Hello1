@@ -23,7 +23,7 @@ public class DBHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         Log.d(TAG, "Table Create");
-        String createQuery = "CREATE TABLE " + TABLE_NAME1 +
+        String createQuery = "CREATE TABLE " + TABLE_NAME +
                 "( ID INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 "Number TEXT, " +
                 "Value INTEGER );";

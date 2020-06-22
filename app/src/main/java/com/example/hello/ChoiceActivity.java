@@ -61,6 +61,7 @@ public class ChoiceActivity<childUpdates> extends AppCompatActivity {
                 Intent intent = new Intent(v.getContext(), Shopping_list.class);
                 v.getContext().startActivity(intent);
                 finish();
+
             }
         });
 
@@ -70,16 +71,72 @@ public class ChoiceActivity<childUpdates> extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 dbSelect1();
-                Intent intent = new Intent(v.getContext(), List_New.class);
-                intent.putExtra("Code", 11);
-                intent.putExtra("list", nameeee);
-                v.getContext().startActivity(intent);
+
+                if(nameeee.size() != 0) {
+                    Intent intent = new Intent(v.getContext(), List_New.class);
+                    intent.putExtra("Code", 11);
+                    intent.putExtra("list", nameeee);
+                    v.getContext().startActivity(intent);
+                    finish();
+                }
+                else{
+                    Toast.makeText(v.getContext(), "재료를 선택해주세요.", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
 
         helper = new DBHelper(this, "DB", null, 1);
         db = helper.getWritableDatabase();
+
+
+        //helper.onCreate(db);
+
+        //dbInsert("Ingredient", "파", 0);
+        //dbInsert("Ingredient", "양파", 0);
+        //dbInsert("Ingredient", "당근", 0);
+        //dbInsert("Ingredient", "감자", 0);
+        //dbInsert("Ingredient", "마늘", 0);
+        //dbInsert("Ingredient", "양배추", 0);
+        //dbInsert("Ingredient", "토마토", 0);
+        //dbInsert("Ingredient", "시금치", 0);
+        //dbInsert("Ingredient", "고추", 0);
+        //dbInsert("Ingredient", "브로콜리", 0);
+        //dbInsert("Ingredient", "콩나물", 0);
+        //dbInsert("Ingredient", "버섯", 0);
+        //dbInsert("Ingredient", "오이", 0);
+        //dbInsert("Ingredient", "파프리카", 0);
+        //dbInsert("Ingredient", "숙주", 0);
+        //dbInsert("Ingredient", "가지", 0);
+        //dbInsert("Ingredient", "돼지고기", 0);
+        //dbInsert("Ingredient", "닭고기", 0);
+        //dbInsert("Ingredient", "베이컨", 0);
+        //dbInsert("Ingredient", "계란", 0);
+        //dbInsert("Ingredient", "오징어", 0);
+        //dbInsert("Ingredient", "바지락", 0);
+        //dbInsert("Ingredient", "홍합", 0);
+        //dbInsert("Ingredient", "새우", 0);
+        //dbInsert("Ingredient", "두부", 0);
+        //dbInsert("Ingredient", "어묵", 0);
+        //dbInsert("Ingredient", "참치통조림", 0);
+        //dbInsert("Ingredient", "떡", 0);
+
+        //dbInsert("Menu", "돼지고기 김치찌개", 0);
+        //dbInsert("Menu", "된장찌개", 0);
+        //dbInsert("Menu", "제육볶음", 0);
+        //dbInsert("Menu", "탕수육", 0);
+        //dbInsert("Menu", "짜장면", 0);
+        //dbInsert("Menu", "고기만두", 0);
+        //dbInsert("Menu", "크림파스타", 0);
+        //dbInsert("Menu", "프라이드 치킨", 0);
+        //dbInsert("Menu", "시저 샐러드", 0);
+        //dbInsert("Menu", "어묵우동", 0);
+        //dbInsert("Menu", "일식 돈까스", 0);
+        //dbInsert("Menu", "쌀국수", 0);
+
+
+
+
 
         buttonControl();
 
@@ -504,7 +561,7 @@ public class ChoiceActivity<childUpdates> extends AppCompatActivity {
                     String id = cursor.getString(cursor.getColumnIndex("ID"));
                     String number = cursor.getString(cursor.getColumnIndex("Number"));
                     value = cursor.getString(cursor.getColumnIndex("Value"));
-                    Log.d(TAG,  "Ingredient############: " + id + number + value);
+                    Log.d(TAG,  "재료 목록!!!!: " + id + number + value);
                 }
             }
         } finally {
@@ -514,17 +571,14 @@ public class ChoiceActivity<childUpdates> extends AppCompatActivity {
         }
     }
 
-    void dbInsert(View view, String tableName, String number, Integer val){
+    void dbInsert(String tableName, String number, Integer val){
         //Log.d(TAG, "Insert Data "+number);
 
         ContentValues contentValues = new ContentValues();
         contentValues.put("Number", number);
         contentValues.put("Value", val);
 
-        //Toast.makeText(this,number, Toast.LENGTH_SHORT).show();
 
-        //Intent intent = new Intent(view.getContext(), Shopping_list.class);
-        //intent.putExtra("1", number);
 
         long id = db.insert(tableName, null, contentValues);
 

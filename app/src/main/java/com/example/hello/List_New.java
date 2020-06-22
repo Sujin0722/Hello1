@@ -3,6 +3,7 @@ package com.example.hello;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -16,6 +17,8 @@ import java.util.Arrays;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.ContextCompat;
+
+import static android.content.ContentValues.TAG;
 
 public class List_New extends AppCompatActivity {
 
@@ -59,6 +62,8 @@ public class List_New extends AppCompatActivity {
     CheckBox check_Western;
     CheckBox check_Amount;
     CheckBox check_Etc;
+    String titleStr;
+    int amisare;
 
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -88,11 +93,16 @@ public class List_New extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView parent, View v, int position, long id) {
                 ListViewItem item = (ListViewItem) parent.getItemAtPosition(position) ;
-                String titleStr = item.getTitleStr();
+                titleStr = item.getTitleStr();
                 Drawable img = item.getIconDrawble();
 
+                meme(titleStr);
+
+
+
+                Log.d(TAG,  "리스트뉴" + position);
                 Intent intent = new Intent(List_New.this, DetailActivity.class);
-                intent = intent.putExtra("position", position-1);
+                intent = intent.putExtra("position", amisare);
                 intent = intent.putExtra("name", titleStr);
                 v.getContext().startActivity(intent);
 
@@ -102,7 +112,46 @@ public class List_New extends AppCompatActivity {
 
     }
 
-
+    void meme(String aa){
+        switch (aa){
+            case "돼지고기 김치찌개":
+                amisare = 0;
+                break;
+            case "된장찌개":
+                amisare = 1;
+                break;
+            case "제육볶음":
+                amisare = 2;
+                break;
+            case "탕수육":
+                amisare = 3;
+                break;
+            case "짜장면":
+                amisare = 4;
+                break;
+            case "고기만두":
+                amisare = 5;
+                break;
+            case "크림파스타":
+                amisare = 6;
+                break;
+            case "프라이드 치킨":
+                amisare = 7;
+                break;
+            case "시저 샐러드":
+                amisare = 8;
+                break;
+            case "어묵우동":
+                amisare = 9;
+                break;
+            case "일식 돈까스":
+                amisare = 10;
+                break;
+            case "쌀국수":
+                amisare = 11;
+                break;
+        }
+    }
 
     void calculation(){
         for (int i=0; i<list.size(); i++){

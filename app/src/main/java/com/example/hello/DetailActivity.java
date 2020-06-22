@@ -105,7 +105,12 @@ public class DetailActivity extends YouTubeBaseActivity {
         youTubePlayerView.initialize("sujin", listener);
 
 
+        Log.d(TAG,  "디테일" + position);
+
         dbSelect_Menu(position+1);
+
+
+
 
         btn_heart = (CheckBox) findViewById(R.id.checkBox);
         if(flag == 1){
