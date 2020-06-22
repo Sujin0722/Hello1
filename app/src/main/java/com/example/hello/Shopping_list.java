@@ -83,6 +83,7 @@ public class Shopping_list extends AppCompatActivity {
     ListView mListView;
     ListViewAdapter adapter;
     private ArrayList<Integer> hoho = new ArrayList<Integer>();
+    int amisare;
 
 
     public void onCreate(Bundle savedInstanceState) {
@@ -431,8 +432,10 @@ public class Shopping_list extends AppCompatActivity {
                 String titleStr = item.getTitleStr();
                 Drawable img = item.getIconDrawble();
 
+                meme(titleStr);
+
                 Intent intent = new Intent(Shopping_list.this, DetailActivity.class);
-                intent = intent.putExtra("position", hoho.get(position)-1);
+                intent = intent.putExtra("position", amisare);
                 intent = intent.putExtra("name", titleStr);
                 v.getContext().startActivity(intent);
                 //Toast.makeText(v.getContext(), titleStr, Toast.LENGTH_SHORT).show();
@@ -489,6 +492,47 @@ public class Shopping_list extends AppCompatActivity {
                 break;
         }
 
+    }
+
+    void meme(String aa){
+        switch (aa){
+            case "돼지고기 김치찌개":
+                amisare = 0;
+                break;
+            case "된장찌개":
+                amisare = 1;
+                break;
+            case "제육볶음":
+                amisare = 2;
+                break;
+            case "탕수육":
+                amisare = 3;
+                break;
+            case "짜장면":
+                amisare = 4;
+                break;
+            case "고기만두":
+                amisare = 5;
+                break;
+            case "크림파스타":
+                amisare = 6;
+                break;
+            case "프라이드 치킨":
+                amisare = 7;
+                break;
+            case "시저 샐러드":
+                amisare = 8;
+                break;
+            case "어묵우동":
+                amisare = 9;
+                break;
+            case "일식 돈까스":
+                amisare = 10;
+                break;
+            case "쌀국수":
+                amisare = 11;
+                break;
+        }
     }
 
     public boolean onOptionsItemSelected(MenuItem item) {
